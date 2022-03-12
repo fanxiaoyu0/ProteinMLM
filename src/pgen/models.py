@@ -13,7 +13,9 @@ class ESM6():
 
 class ESM12():
     def __init__(self):
-        self.model, self.alphabet = esm.pretrained.esm1_t12_85M_UR50S()
+        self.model, self.alphabet = esm.pretrained.load_model_and_alphabet_local(
+            "/home/protein_gibbs_sampler/model/ESM12/2/esm1_t12_85M_UR50S/2022-03-06-18-23-39/checkpoints/best-model-checkpoint-Mar06_18-23-40_ab04307d.pt")
+        # self.model, self.alphabet = esm.pretrained.esm1_t12_85M_UR50S()
         self.batch_converter = self.alphabet.get_batch_converter()
 
 class ESM34():

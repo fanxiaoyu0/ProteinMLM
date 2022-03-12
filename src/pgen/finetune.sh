@@ -1,0 +1,1 @@
+python finetune.py --model esm1_t12_85M_UR50S --arch protein_bert_base --checkpoint_interval 5 --datapath /home/protein_gibbs_sampler/data/CycloterpeneSynthase.fasta --epochs 100 --output_dir /home/protein_gibbs_sampler/model/ESM12/2/ --toks_per_batch 4096

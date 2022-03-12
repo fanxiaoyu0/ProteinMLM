@@ -1,5 +1,7 @@
 import sys
 import argparse, textwrap
+import sys
+sys.path.append("/home/protein_gibbs_sampler/src/")
 from pgen.esm_sampler import ESM_sampler
 from pgen import models
 from pgen.utils import write_sequential_fasta, parse_fasta, unalign, add_gaps_back, RawAndDefaultsFormatter
@@ -31,7 +33,7 @@ def main(input_h, output_p, args):
                     if args.keep_gap_positions:
                         generated_sequence = add_gaps_back(generated_sequence, gap_mask)
                     sequences += [generated_sequence]
-                write_sequential_fasta( output_p / (name + ".fasta"), sequences )
+                write_sequential_fasta( output_p / ("gen.fasta"), sequences )
 
 
 if __name__ == "__main__":
